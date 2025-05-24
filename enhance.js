@@ -1,18 +1,18 @@
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const enhanceBtn = document.getElementById('enhance-btn');
   const promptInput = document.getElementById('prompt');
+  const output = document.getElementById('enhanced-output');
 
-  if (!enhanceBtn || !promptInput) return;
+  if (!enhanceBtn || !promptInput || !output) return;
 
   enhanceBtn.addEventListener('click', async () => {
     const prompt = promptInput.value.trim();
     if (!prompt) {
-      alert('Prompt cannot be empty.');
+      output.textContent = 'Prompt cannot be empty.';
       return;
     }
 
-    enhanceBtn.disabled = true;
-    enhanceBtn.textContent = 'Enhancing...';
+    output.innerHTML = '<span class="loading-spinner"></span>Enhancing...';
 
     try {
       const encodedPrompt = encodeURIComponent(prompt);
@@ -23,16 +23,15 @@
       }
 
       const result = await response.text();
+
       if (result) {
-        promptInput.value = result; // Replace original prompt with enhanced text
+        output.textContent = result;
+        promptInput.value = result; // Auto-fill the prompt input with enhanced result
       } else {
-        alert('No enhanced text received.');
+        output.textContent = 'No enhanced text received.';
       }
     } catch (error) {
-      alert('Failed to enhance prompt: ' + error.message);
-    } finally {
-      enhanceBtn.disabled = false;
-      enhanceBtn.textContent = 'Enhance Prompt';
+      output.textContent = 'Failed to enhance prompt: ' + error.message;
     }
   });
 });
