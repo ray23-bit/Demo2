@@ -10,6 +10,25 @@
       return;
     }
 
+   // Tambahkan gaya berdasarkan konteks prompt
+    const stylesByKeyword = [
+      { keyword: /robot|android|machine/i, style: 'in a sci-fi cyberpunk style, with neon lights and dark shadows' },
+      { keyword: /forest|mountain|nature|tree/i, style: 'in a natural landscape style, like a painting by Bob Ross' },
+      { keyword: /city|urban|building/i, style: 'in a futuristic cityscape style, cinematic lighting' },
+      { keyword: /anime|girl|boy|character/i, style: 'in anime style, vibrant colors and clean line art' },
+      { keyword: /ocean|sea|water/i, style: 'with a dreamy underwater effect, soft lighting and flowing motion' }
+    ];
+
+    let matchedStyle = 'in a creative surrealist style, with high contrast and bold colors'; // default
+    for (const item of stylesByKeyword) {
+      if (item.keyword.test(prompt)) {
+        matchedStyle = item.style;
+        break;
+      }
+    }
+
+    const enhancedPrompt = `${prompt}, ${matchedStyle}`;
+   
     output.innerHTML = '<span class="loading-spinner"></span> Enhancing...';
 
     try {
