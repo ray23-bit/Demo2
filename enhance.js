@@ -27,7 +27,9 @@
       }
     }
 
-    const enhancedPrompt = `${prompt}, ${matchedStyle}`;
+    const enhancedPrompt = `$
+     {prompt}, $
+     {matchedStyle}`;
    
     output.innerHTML = '<span class="loading-spinner"></span> Enhancing...';
 
