@@ -125,23 +125,23 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Adjustments */
 @media (max-width: 600px) {
   .loading-state,
   .enhance-prompt,
   .original-prompt {
     padding: 12px;
   }
-  
+
   .loading-spinner {
     width: 18px;
     height: 18px;
   }
-}
-/* Enhance Button Styling */
+} /* Ini penting! Penutup media query */
+
+/* Ini berada di luar media query agar bekerja di semua layar */
 .enhance-btn {
-  padding: 2px 20px;        /* Atur ukuran tombol */
-  font-size: 6px;           /* Atur ukuran teks */
+  padding: 7px 12px;
+  font-size: 10px;
   border-radius: 10px;
   background-color: #9c66d7;
   color: white;
@@ -155,4 +155,3 @@
   background-color: #8a55c5;
   transform: scale(1.03);
 }
-
