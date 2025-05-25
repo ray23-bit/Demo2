@@ -140,8 +140,8 @@
 }
 /* Enhance Button Styling */
 .enhance-btn {
-  padding: 7px 12px;        /* Atur ukuran tombol */
-  font-size: 10px;           /* Atur ukuran teks */
+  padding: 2px 20px;        /* Atur ukuran tombol */
+  font-size: 6px;           /* Atur ukuran teks */
   border-radius: 10px;
   background-color: #9c66d7;
   color: white;
