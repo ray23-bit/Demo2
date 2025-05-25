@@ -140,7 +140,7 @@
 
 /* Ini berada di luar media query agar bekerja di semua layar */
 .enhance-btn {
-  padding: 10px 600px;
+  padding: 10px 150px;
   font-size: 18px;
   border-radius: 10px;
   background-color: #9c66d7;
@@ -152,7 +152,7 @@
 }
 
 button.enhance-btn {
-  padding: 10px 600px !important;
+  padding: 10px 150px !important;
   font-size: 18px !important;
 }
 
