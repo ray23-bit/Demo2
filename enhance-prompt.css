@@ -1,4 +1,4 @@
-/* Enhanced Prompt CSS - Complete Styling */
+/* Enhance Prompt CSS - Complete Styling */
 /* Loading Animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -29,7 +29,7 @@
 }
 
 /* Prompt Containers */
-.enhanced-prompt, 
+.enhance-prompt, 
 .original-prompt {
   padding: 16px;
   margin: 16px 0;
@@ -44,7 +44,7 @@
   background: #f5f5f5;
 }
 
-.enhanced-prompt h4, 
+.enhance-prompt h4, 
 .original-prompt h4 {
   margin: 0 0 8px 0;
   color: #333;
@@ -52,7 +52,7 @@
   font-weight: 600;
 }
 
-.enhanced-prompt p, 
+.enhance-prompt p, 
 .original-prompt p {
   margin: 0;
   color: #444;
@@ -128,7 +128,7 @@
 /* Responsive Adjustments */
 @media (max-width: 600px) {
   .loading-state,
-  .enhanced-prompt,
+  .enhance-prompt,
   .original-prompt {
     padding: 12px;
   }
