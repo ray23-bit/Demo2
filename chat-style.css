@@ -1,0 +1,29 @@
+ .chat-image-ui {
+  margin-top: 30px;
+  padding: 15px;
+  background: #f7f7f7;
+  border-radius: 12px;
+}
+.chat-image-ui textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.chat-image-ui button {
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: #9c66d7;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.chat-image-ui button:hover {
+  background: #7c44b2;
+}
+#chat-response {
+  margin-top: 15px;
+  font-style: italic;
+}
