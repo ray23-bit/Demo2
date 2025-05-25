@@ -18,7 +18,7 @@
       if (!response.ok) throw new Error(`HTTP Error ${response.status}`);
 
       const result = await response.text();
-      output.textContent = result || 'No enhanced text received.';
+      output.textContent = '';
 
       // DEBUG log
       console.log('Enhanced result:', result);
