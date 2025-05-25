@@ -28,10 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'gpt2',
+          model: 'text-davinci-002',  // Updated model
           prompt: originalPrompt,
-          temperature: 0.9,
-          max_tokens: 100
+          temperature: 0.7,           // Adjusted for better results
+          max_tokens: 150,            // Increased token limit
+          top_p: 1.0,                 // Added parameter
+          frequency_penalty: 0.0,     // Added parameter
+          presence_penalty: 0.0      // Added parameter
         })
       });
 
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const result = await response.json();
-      const enhancedPrompt = result?.text;
+      const enhancedPrompt = result?.choices?.[0]?.text || result?.text; // Handle different response formats
 
       if (enhancedPrompt) {
         promptInput.value = enhancedPrompt.trim();
@@ -48,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('No enhanced prompt received.');
       }
     } catch (error) {
-      alert('Error: ' + error.message);
+      alert('Error: ' + (error.message || 'Failed to enhance prompt'));
     } finally {
       enhanceBtn.disabled = false;
       enhanceBtn.textContent = 'Enhance Prompt';
