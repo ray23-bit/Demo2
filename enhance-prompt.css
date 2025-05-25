@@ -137,4 +137,23 @@
     width: 18px;
     height: 18px;
   }
+
+/* Enhance Button Styling */
+.enhance-btn {
+  padding: 8px 12px;        /* Atur ukuran tombol */
+  font-size: 14px;           /* Atur ukuran teks */
+  border-radius: 10px;
+  background-color: #9c66d7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px #c5c5c5, -4px -4px 8px #ffffff;
+  transition: all 0.2s ease;
+}
+
+.enhance-btn:hover {
+  background-color: #8a55c5;
+  transform: scale(1.03);
+}
+
 }
