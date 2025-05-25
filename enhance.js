@@ -32,7 +32,7 @@
     output.innerHTML = '<span class="loading-spinner"></span> Enhancing...';
 
     try {
-      const encodedPrompt = encodeURIComponent(prompt);
+      const encodedPrompt = encodeURIComponent(enhancedPrompt);
       const response = await fetch(`https://text.pollinations.ai/${encodedPrompt}`);
       if (!response.ok) throw new Error(`HTTP Error ${response.status}`);
 
