@@ -151,6 +151,11 @@
   transition: all 0.2s ease;
 }
 
+button.enhance-btn {
+  padding: 7px 12px !important;
+  font-size: 10px !important;
+}
+
 .enhance-btn:hover {
   background-color: #8a55c5;
   transform: scale(1.03);
