@@ -140,8 +140,8 @@
 
 /* Ini berada di luar media query agar bekerja di semua layar */
 .enhance-btn {
-  padding: 7px 30px;
-  font-size: 10px;
+  padding: 8px 100px;
+  font-size: 14px;
   border-radius: 10px;
   background-color: #9c66d7;
   color: white;
